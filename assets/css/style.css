@@ -126,6 +126,16 @@ h2 { margin-top: 28px; }
 
 .bullets { padding-left: 18px; }
 .contact { padding: 16px 0 36px; }
+/* Subtle card lift & tighter rhythm */
+.card { box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+.tagline { margin-bottom: 4px; }
+.lede { margin-top: 6px; }
+
+/* Better buttons on mobile */
+@media (max-width: 520px) { .btn { width: 100%; text-align: center; } }
+
+/* Make hero image a bit larger on desktop */
+.hero-media img { max-width: 360px; }
 
 
 
