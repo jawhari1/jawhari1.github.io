@@ -30,4 +30,4 @@ Fields: Environmental & Resource Economics, Urban Economics
 | 2024 | **Optimal Mosquito Control Model** – discrete-time optimal control in Stata | [Draft PDF](link) |
 
 ## Contact
-[jawhari1@unm.edu](mailto:jawhari1@unm.edu) · [LinkedIn](https://www.linkedin.com/in/…) · [CV (PDF)](assets/cv.pdf)
+[jawhari1@unm.edu](mailto:jawhari@unm.edu) · [LinkedIn](https://www.linkedin.com/in/ahmedjawhari/) · [CV (PDF)](assets/cv.pdf)
