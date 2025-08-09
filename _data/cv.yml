@@ -1,3 +1,29 @@
+name: "Ahmed Amine Jawhari"
+email: "jawhari@unm.edu"
+location: "Albuquerque, NM"
+
+sections:
+  - title: Education
+    items:
+      - degree: PhD, Economics (expected 2026)
+        institution: University of New Mexico
+        details:
+          - Fields: Environmental & Resource Economics, Urban Economics
+
+  - title: Research Experience
+    items:
+      - role: Research Assistant
+        institution: UNM
+        details:
+          - Wildfire smoke valuation; survey & CV methods
+          - CHW program evaluation; EHR data integration
+
+  - title: Skills
+    items:
+      - details: Stata · Python · R · GIS · LaTeX
+
+
+
 - title: General Information
   type: map
   contents:
