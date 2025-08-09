@@ -26,8 +26,8 @@ Fields: Environmental & Resource Economics, Urban Economics
 ## Selected Projects
 | Year | Project | Code / Paper |
 |------|---------|--------------|
-| 2025 | **Wildfire Smoke Exposure Panel (2006-2023)** – ZIP-level PM₂.₅ dataset | [GitHub](https://github.com/…) |
+| 2025 | **Wildfire Smoke Exposure Panel (2006-2023)** – ZIP-level PM₂.₅ dataset | [GitHub](https://github.com/jawhari1) |
 | 2024 | **Optimal Mosquito Control Model** – discrete-time optimal control in Stata | [Draft PDF](link) |
 
 ## Contact
-[jawhari1@unm.edu](mailto:jawhari@unm.edu) · [LinkedIn](https://www.linkedin.com/in/ahmedjawhari/) · [CV (PDF)](assets/cv.pdf)
+[jawhari@unm.edu](mailto:jawhari@unm.edu) · [LinkedIn](https://www.linkedin.com/in/ahmedjawhari/) · [CV (PDF)](assets/cv.pdf)
