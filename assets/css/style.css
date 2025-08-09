@@ -115,3 +115,27 @@ h2 { margin-top: 28px; }
 /* ========= Footer ========= */
 .site-footer { border-top: 1px solid var(--border); margin-top: 40px; }
 .site-footer .container { padding: 18px 20px 40px; color: var(--muted); }
+
+/* helpers for chips, grids, subtle text */
+.chips { margin-top: 12px; display:flex; flex-wrap:wrap; gap:8px; }
+.chip { background: var(--card); border: 1px solid var(--border); padding:6px 10px; border-radius: 999px; font-weight:600; font-size:.92rem; }
+.muted { color: var(--muted); }
+
+.grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; padding: 8px 0 22px; }
+@media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
+
+.bullets { padding-left: 18px; }
+.contact { padding: 16px 0 36px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
