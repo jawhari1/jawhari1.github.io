@@ -12,6 +12,8 @@
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 
   --maxw: 960px;
+  --radius: 16px;
+  --shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,7 @@ html[data-theme="dark"] {
   --card: #171a21;
   --border: #2a2f3a;
 }
+
 html, body { height: 100%; }
 body {
   margin: 0;
@@ -36,15 +39,18 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
+a:focus-visible,
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
 img { max-width: 100%; display: block; }
 
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 .container.narrow { max-width: 760px; }
-.skip-link {
-  position: absolute; left: -9999px; top: auto;
-}
+
+.skip-link { position: absolute; left: -9999px; top: auto; }
 .skip-link:focus { left: 12px; top: 12px; background:#ffd; padding:.4rem .6rem; border-radius:8px; }
 
 /* ========= Header / Nav ========= */
@@ -66,13 +72,18 @@ img { max-width: 100%; display: block; }
 }
 
 /* ========= Hero ========= */
-.hero { display:grid; grid-template-columns: 1.4fr .8fr; gap: 32px; padding: 40px 0; }
+.hero {
+  display:grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 32px;
+  padding: 56px 0 32px;
+}
 .hero-text h1 { font-size: clamp(34px, 5vw, 48px); margin: 0 0 8px; font-weight: 800; }
 .highlight { background: linear-gradient(transparent 60%, rgba(11,99,246,.2) 60%); }
-.tagline { color: var(--muted); margin: 0 0 12px; font-weight: 600; }
-.lede { font-family: var(--serif); font-size: 1.05rem; }
+.tagline { color: var(--muted); margin: 0 0 4px; font-weight: 600; }
+.lede { font-family: var(--serif); font-size: 1.05rem; margin-top: 6px; }
 .cta { margin-top: 18px; display:flex; flex-wrap: wrap; gap: 10px; }
-.hero-media img { border-radius: 14px; border: 1px solid var(--border); }
+.hero-media img { border-radius: 14px; border: 1px solid var(--border); max-width: 360px; }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
@@ -83,6 +94,7 @@ img { max-width: 100%; display: block; }
 h1, h2, h3 { color: var(--text); }
 h2 { margin-top: 28px; }
 .dots { list-style: disc; padding-left: 18px; color: var(--text); }
+.bullets { padding-left: 18px; }
 .split { display:grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 20px 0 40px; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
@@ -93,59 +105,54 @@ h2 { margin-top: 28px; }
 .pubs > li::marker { font-weight: 700; }
 
 /* ========= Cards ========= */
-.cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
 .card {
-  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-  padding: 16px 16px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 24px;
+  box-shadow: var(--shadow);
 }
-.card h3 { margin: 0 0 8px; }
-.links { display:flex; gap: 8px; }
+.card h3 { margin-top: 0; margin-bottom: 10px; }
+.card p  { margin: 8px 0 0; }
+
+/* Highlight cards layout (stacked for breathing room) */
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;   /* always one column (stacked) */
+  gap: 28px;
+  padding: 12px 0 32px;
+}
 
 /* ========= Buttons ========= */
 .btn {
-  display:inline-block; background: var(--accent); color: #fff; border: 1px solid var(--accent);
-  padding: 10px 14px; border-radius: 12px; font-weight: 700; letter-spacing: .2px;
+  display:inline-block;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
 }
 .btn:hover { filter: brightness(0.95); text-decoration: none; }
-.btn.ghost {
-  background: transparent; color: var(--text); border-color: var(--border);
-}
+.btn.ghost { background: transparent; color: var(--text); border-color: var(--border); }
 .btn.sm { padding: 8px 10px; font-weight: 600; }
+@media (max-width: 520px) { .btn { width: 100%; text-align: center; } }
 
 /* ========= Footer ========= */
 .site-footer { border-top: 1px solid var(--border); margin-top: 40px; }
 .site-footer .container { padding: 18px 20px 40px; color: var(--muted); }
 
-/* helpers for chips, grids, subtle text */
+/* ========= Helpers ========= */
 .chips { margin-top: 12px; display:flex; flex-wrap:wrap; gap:8px; }
-.chip { background: var(--card); border: 1px solid var(--border); padding:6px 10px; border-radius: 999px; font-weight:600; font-size:.92rem; }
+.chip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding:6px 10px;
+  border-radius: 999px;
+  font-weight:600;
+  font-size:.92rem;
+}
 .muted { color: var(--muted); }
 
-.grid-3 { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; padding: 8px 0 22px; }
-@media (max-width: 900px) { .grid-3 { grid-template-columns: 1fr; } }
-
-.bullets { padding-left: 18px; }
 .contact { padding: 16px 0 36px; }
-/* Subtle card lift & tighter rhythm */
-.card { box-shadow: 0 6px 18px rgba(0,0,0,.06); }
-.tagline { margin-bottom: 4px; }
-.lede { margin-top: 6px; }
-
-/* Better buttons on mobile */
-@media (max-width: 520px) { .btn { width: 100%; text-align: center; } }
-
-/* Make hero image a bit larger on desktop */
-.hero-media img { max-width: 360px; }
-
-
-
-
-
-
-
-
-
-
-
-
-
