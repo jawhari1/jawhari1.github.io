@@ -78,10 +78,22 @@ img { max-width: 100%; display: block; }
   gap: 32px;
   padding: 56px 0 32px;
 }
-.hero-text h1 { font-size: clamp(34px, 5vw, 48px); margin: 0 0 8px; font-weight: 800; }
+.hero-text h1 {
+  font-size: clamp(34px, 5vw, 48px);
+  margin: 0 0 8px;
+  font-weight: 800;
+}
 .highlight { background: linear-gradient(transparent 60%, rgba(11,99,246,.2) 60%); }
 .tagline { color: var(--muted); margin: 0 0 4px; font-weight: 600; }
-.lede { font-family: var(--serif); font-size: 1.05rem; margin-top: 6px; }
+
+/* Readability: keep lede from stretching too wide on big screens */
+.lede {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  margin-top: 6px;
+  max-width: 58ch;
+}
+
 .cta { margin-top: 18px; display:flex; flex-wrap: wrap; gap: 10px; }
 .hero-media img { border-radius: 14px; border: 1px solid var(--border); max-width: 360px; }
 
@@ -95,6 +107,7 @@ h1, h2, h3 { color: var(--text); }
 h2 { margin-top: 28px; }
 .dots { list-style: disc; padding-left: 18px; color: var(--text); }
 .bullets { padding-left: 18px; }
+
 .split { display:grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 20px 0 40px; }
 @media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
 
@@ -109,11 +122,15 @@ h2 { margin-top: 28px; }
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 22px 22px 24px;
+  padding: 24px 24px 26px;
   box-shadow: var(--shadow);
 }
+
+/* Internal rhythm: reduce crammed feel */
 .card h3 { margin-top: 0; margin-bottom: 10px; }
-.card p  { margin: 8px 0 0; }
+.card p  { margin: 0 0 14px; }
+.card ul { margin: 10px 0 4px; padding-left: 18px; }
+.card li { margin-bottom: 8px; line-height: 1.55; }
 
 /* Highlight cards layout (stacked for breathing room) */
 .grid-3 {
@@ -122,6 +139,18 @@ h2 { margin-top: 28px; }
   gap: 28px;
   padding: 12px 0 32px;
 }
+
+/* Increase vertical separation from hero to cards */
+section.grid-3 { margin-top: 36px; }
+
+/* Give the first card more prominence */
+.grid-3 .card:first-child {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Slightly reduce density of later cards */
+.grid-3 .card:not(:first-child) { opacity: 0.96; }
 
 /* ========= Buttons ========= */
 .btn {
@@ -157,21 +186,11 @@ h2 { margin-top: 28px; }
 
 .contact { padding: 16px 0 36px; }
 
-/* Increase vertical separation between sections */
-section.grid-3 {
-  margin-top: 36px;
+/* Optional: micro-heading style (use in HTML like <p class="kicker">Focus</p>) */
+.kicker {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin: 0 0 6px;
 }
-
-/* Give the first card more prominence */
-.grid-3 .card:first-child {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-/* Slightly reduce density of later cards */
-.grid-3 .card:not(:first-child) {
-  opacity: 0.96;
-}
-
-
-
