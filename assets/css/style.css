@@ -156,3 +156,22 @@ h2 { margin-top: 28px; }
 .muted { color: var(--muted); }
 
 .contact { padding: 16px 0 36px; }
+
+/* Increase vertical separation between sections */
+section.grid-3 {
+  margin-top: 36px;
+}
+
+/* Give the first card more prominence */
+.grid-3 .card:first-child {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Slightly reduce density of later cards */
+.grid-3 .card:not(:first-child) {
+  opacity: 0.96;
+}
+
+
+
