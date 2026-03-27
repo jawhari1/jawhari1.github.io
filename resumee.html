@@ -16,6 +16,35 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* CV layout */
+    .cv-section { margin-bottom: 40px; }
+    .cv-section h2 { border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 18px; }
+
+    .cv-entry { display: grid; grid-template-columns: 1fr auto; gap: 8px 24px; margin-bottom: 18px; align-items: start; }
+    .cv-entry-main { grid-column: 1; }
+    .cv-entry-date { grid-column: 2; color: var(--muted); font-size: 0.9rem; white-space: nowrap; padding-top: 2px; }
+    .cv-entry h3 { margin: 0 0 2px; font-size: 1rem; }
+    .cv-entry .institution { color: var(--muted); font-size: 0.92rem; margin: 0 0 6px; }
+    .cv-entry ul { margin: 4px 0 0; padding-left: 18px; }
+    .cv-entry li { margin-bottom: 4px; line-height: 1.55; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .skill-group { }
+    .skill-group h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); margin: 0 0 6px; }
+    .skill-group p { margin: 0; line-height: 1.6; }
+
+    .award-entry { display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; margin-bottom: 12px; }
+    .award-entry .award-name { font-weight: 600; }
+    .award-entry .award-date { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+    .award-entry .award-detail { color: var(--muted); font-size: 0.92rem; grid-column: 1; }
+
+    @media (max-width: 600px) {
+      .cv-entry { grid-template-columns: 1fr; }
+      .cv-entry-date { grid-column: 1; }
+      .award-entry { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 
 <body>
@@ -31,19 +60,244 @@
     </nav>
     <button class="theme-toggle" aria-label="Toggle dark mode">☾</button>
   </div>
-  </header>
+</header>
 
 <main class="container narrow">
   <h1>Résumé</h1>
-
   <p>
-    <a class="btn sm" href="assets/pdf/cv.pdf" target="_blank">Download Résumé (PDF)</a>
+    <a class="btn sm" href="assets/pdf/cv.pdf" target="_blank">Download PDF</a>
   </p>
 
-  <p class="muted">
-    PhD candidate in Economics, University of New Mexico. Research in environmental, public,
-    and health economics.
-  </p>
+  <!-- EDUCATION -->
+  <section class="cv-section">
+    <h2>Education</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>PhD Candidate in Economics</h3>
+        <p class="institution">University of New Mexico, Albuquerque, NM</p>
+        <ul>
+          <li>Fields: Environmental &amp; Resource Economics, Health Economics, Public Economics</li>
+        </ul>
+      </div>
+      <div class="cv-entry-date">2022 – Expected 2027</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Master's Degree in Economics <span style="font-weight:400">(GPA: 4.16)</span></h3>
+        <p class="institution">University of New Mexico, Albuquerque, NM</p>
+      </div>
+      <div class="cv-entry-date">May 2024</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Bachelor's Degree in Applied Economics</h3>
+        <p class="institution">UM6P University (FGSES), Rabat, Morocco</p>
+      </div>
+      <div class="cv-entry-date">2019 – 2022</div>
+    </div>
+  </section>
+
+  <!-- RESEARCH EXPERIENCE -->
+  <section class="cv-section">
+    <h2>Research Experience</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Research Assistant</h3>
+        <p class="institution">Economics Department, University of New Mexico</p>
+        <ul>
+          <li>Supported faculty research in environmental, energy, and health economics using survey methods, administrative datasets, econometric modeling, and geospatial analysis.</li>
+          <li>Supervisors: Dr. Benjamin A. Jones &amp; Dr. Brady Horn.</li>
+        </ul>
+      </div>
+      <div class="cv-entry-date">June 2024 – Present</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Teaching Assistant</h3>
+        <p class="institution">Economics Department, University of New Mexico</p>
+        <ul>
+          <li>Led review sessions, held office hours, and graded assignments for 100+ students per semester.</li>
+        </ul>
+      </div>
+      <div class="cv-entry-date">Aug 2022 – May 2024</div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="cv-section">
+    <h2>Publications</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3 style="font-weight: 400; font-family: var(--serif);">
+          Jawhari, Ahmed Amine, Benjamin A. Jones, and Robert P. Berrens.
+          "Linking Forests to Airsheds: Investigating Public Support and Willingness-to-Pay for
+          Reducing Wildfire Smoke Exposure."
+          <em>Land Economics</em>, in press.
+        </h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFERENCE PRESENTATIONS -->
+  <section class="cv-section">
+    <h2>Conference Presentations</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>NSF EPSCoR Proposal Workshop</h3>
+        <p class="institution">Oklahoma State University, Stillwater, OK</p>
+      </div>
+      <div class="cv-entry-date">Oct 2025</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Camp Resources Summer Workshop</h3>
+        <p class="institution">Asheville, North Carolina</p>
+      </div>
+      <div class="cv-entry-date">Aug 2025</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Association of Environmental and Resource Economists (AERE)</h3>
+        <p class="institution">Albuquerque, New Mexico</p>
+        <p style="margin:0; font-size:0.92rem;">"Investigating Willingness-to-Pay for Mitigating Wildfire Smoke Exposure."</p>
+      </div>
+      <div class="cv-entry-date">May 2025</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>16th Himalayan Policy Research Conference (HPRC)</h3>
+        <p class="institution">Remote Conference, USA</p>
+        <p style="margin:0; font-size:0.92rem;">"The Effects of Air Pollution on School Absenteeism."</p>
+      </div>
+      <div class="cv-entry-date">Dec 2021</div>
+    </div>
+  </section>
+
+  <!-- GRANTS & AWARDS -->
+  <section class="cv-section">
+    <h2>Grants &amp; Awards</h2>
+
+    <div class="award-entry">
+      <div class="award-name">Best Poster Award — Gold · Economics Research Day</div>
+      <div class="award-date">Sept 2025</div>
+      <div class="award-detail">Economics Department, University of New Mexico</div>
+    </div>
+
+    <div class="award-entry">
+      <div class="award-name">New Mexico Research Grant (NMRG) — $3,000</div>
+      <div class="award-date">Oct 2024</div>
+      <div class="award-detail">UNM Graduate and Professional Student Association · Contingent valuation survey for New Mexico</div>
+    </div>
+
+    <div class="award-entry">
+      <div class="award-name">Summer Fellowship — $3,000</div>
+      <div class="award-date">April 2025</div>
+      <div class="award-detail">Economics Department, University of New Mexico</div>
+    </div>
+
+    <div class="award-entry">
+      <div class="award-name">Summer Fellowship — $3,000</div>
+      <div class="award-date">April 2024</div>
+      <div class="award-detail">Economics Department, University of New Mexico</div>
+    </div>
+
+    <div class="award-entry">
+      <div class="award-name">Phi Kappa Phi Honor Society</div>
+      <div class="award-date">Jan 2024</div>
+      <div class="award-detail">UNM Chapter</div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="cv-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Statistical &amp; Econometric</h3>
+        <p>Stata · R · Python (pandas, scikit-learn) · Survey design · Spatial econometrics</p>
+      </div>
+      <div class="skill-group">
+        <h3>Spatial Analysis</h3>
+        <p>ArcGIS Pro · Satellite PM<sub>2.5</sub> data · Web scraping for data</p>
+      </div>
+      <div class="skill-group">
+        <h3>Survey &amp; Experiment Design</h3>
+        <p>Contingent valuation · Discrete choice experiments · Qualtrics</p>
+      </div>
+      <div class="skill-group">
+        <h3>Writing &amp; Tools</h3>
+        <p>LaTeX · Microsoft Office (Excel, advanced formulas) · Technical writing</p>
+      </div>
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <p>English · French · Arabic</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="cv-section">
+    <h2>Certifications</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Main Campus Researchers</h3>
+        <p class="institution">CITI Program · UNM Main Campus</p>
+      </div>
+      <div class="cv-entry-date">Jan 2025</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Social and Behavioral Research Investigators</h3>
+        <p class="institution">CITI Program · UNM Health Sciences Center</p>
+      </div>
+      <div class="cv-entry-date">Jan 2025</div>
+    </div>
+  </section>
+
+  <!-- SERVICE & LEADERSHIP -->
+  <section class="cv-section">
+    <h2>Service &amp; Leadership</h2>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Treasurer — Economics Graduate Students Organization (EGSO)</h3>
+        <p class="institution">University of New Mexico</p>
+        <ul>
+          <li>Managing fundraising activities to support student-led initiatives and events.</li>
+        </ul>
+      </div>
+      <div class="cv-entry-date">2024 – Present</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Member — Rotaract Club</h3>
+        <p class="institution">UM6P University, Morocco</p>
+      </div>
+      <div class="cv-entry-date">2019 – 2020</div>
+    </div>
+
+    <div class="cv-entry">
+      <div class="cv-entry-main">
+        <h3>Project &amp; Team Leader — Enactus UM6P Club</h3>
+        <p class="institution">UM6P University, Morocco</p>
+      </div>
+      <div class="cv-entry-date">2019 – 2020</div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">

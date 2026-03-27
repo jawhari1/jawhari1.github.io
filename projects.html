@@ -4,24 +4,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Projects — Ahmed Amine Jawhari</title>
+    <meta name="description" content="Research projects by Ahmed Amine Jawhari in environmental economics, energy economics, and health economics." />
 
-    <!-- this is for OG Tags that appear when URL is shared on socials -->
-    <link rel="canonical" href="https://jawhari1.github.io/"> <!-- optional; for SEO I'd keep canonical per page -->
+    <link rel="canonical" href="https://jawhari1.github.io/projects.html" />
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Ahmed Amine Jawhari">
-    <meta property="og:title" content="Ahmed Amine Jawhari — Research Economist">
-    <meta property="og:description" content="Public, urban & environmental economics; wildfire smoke; CHW programs; spatial econometrics.">
-    <meta property="og:url" content="https://jawhari1.github.io/">
+    <meta property="og:title" content="Projects — Ahmed Amine Jawhari">
+    <meta property="og:description" content="Research projects in environmental economics, energy economics, and health economics.">
+    <meta property="og:url" content="https://jawhari1.github.io/projects.html">
     <meta property="og:image" content="https://jawhari1.github.io/assets/img/headshot.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Ahmed Amine Jawhari — Research Economist">
-    <meta name="twitter:description" content="Public, urban & environmental economics; wildfire smoke; CHW programs; spatial econometrics.">
-    <meta name="twitter:image" content="https://jawhari1.github.io/assets/img/headshot.jpg">
-    <!-- . -->
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
     <script defer src="assets/js/main.js"></script>
+    <style>
+      .cards { display: grid; gap: 24px; padding-bottom: 48px; }
+      .card .links { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; }
+      .status-chip {
+        display: inline-block;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        padding: 3px 9px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+        background: var(--bg);
+        margin-bottom: 10px;
+      }
+      .status-chip.active { color: #1a7f3c; border-color: #1a7f3c; background: #edfaf2; }
+      html[data-theme="dark"] .status-chip.active { color: #4ade80; border-color: #166534; background: #052e16; }
+      .status-chip.press { color: #b45309; border-color: #b45309; background: #fffbeb; }
+      html[data-theme="dark"] .status-chip.press { color: #fbbf24; border-color: #92400e; background: #1c1100; }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -40,21 +55,109 @@
 
     <main class="container">
       <h1>Projects</h1>
+      <p class="muted">Active and completed research projects. Code and data repositories will be linked as they are made publicly available.</p>
 
       <div class="cards">
+
+        <!-- Project 1 -->
         <article class="card">
-          <h3>Wildfire Smoke Exposure Panel (2006–2023)</h3>
-          <p>Daily ZIP-level smoke PM₂.₅ predictions; cleaning, merges, and exposure metrics.</p>
-          <div class="links">
-            <a href="#" class="btn sm">Code</a>
-            <a href="#" class="btn sm ghost">Readme</a>
-          </div>
+          <p class="kicker">Environmental Economics · Wildfire Smoke</p>
+          <span class="status-chip press">In Press — Land Economics</span>
+          <h3>Willingness-to-Pay for Wildfire Smoke Mitigation</h3>
+          <p>
+            A regional nonmarket valuation study estimating households' willingness-to-pay (WTP)
+            for wildfire smoke mitigation across 11 Western U.S. states. The study uses a large-scale
+            contingent valuation (CV) survey to elicit preferences for reducing smoke exposure and
+            financing forest fuel treatments.
+          </p>
+          <p class="muted">
+            <strong>Methods:</strong> Contingent valuation, benefit–cost analysis, interval data regression.<br>
+            <strong>Collaborators:</strong> Benjamin A. Jones &amp; Robert P. Berrens (University of New Mexico).
+          </p>
         </article>
 
-        <!-- Duplicate <article class="card">…</article> for more projects -->
+        <!-- Project 2 -->
+        <article class="card">
+          <p class="kicker">Environmental Economics · Wildfire Smoke</p>
+          <span class="status-chip active">In Progress</span>
+          <h3>Wildfire Smoke Exposure Panel (2006–2023)</h3>
+          <p>
+            Construction of a daily ZIP-code–level wildfire smoke exposure panel using satellite-based
+            PM<sub>2.5</sub> predictions from the Stanford ECHO Lab. The panel is merged with
+            contingent valuation survey data to compare self-reported smoke exposure with objectively
+            measured concentrations, and to assess implications for stated WTP and policy design.
+          </p>
+          <p class="muted">
+            <strong>Data:</strong> smokePM2.5 daily ZCTA predictions (2006–2023); CV survey responses.<br>
+            <strong>Methods:</strong> Spatial merge, exposure metric construction, econometric analysis.<br>
+            <strong>Tools:</strong> Stata, Python (pandas), ArcGIS Pro.
+          </p>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card">
+          <p class="kicker">Environmental Economics · Survey Design</p>
+          <span class="status-chip active">In Progress</span>
+          <h3>New Mexico Contingent Valuation Survey on Wildfire Smoke</h3>
+          <p>
+            Design and administration of a state-level contingent valuation survey eliciting New Mexico
+            households' willingness-to-pay for reducing wildfire smoke exposure. The survey went through
+            five design iterations and is administered via Qualtrics. This project is funded by the
+            New Mexico Research Grant (NMRG) and is IRB approved.
+          </p>
+          <p class="muted">
+            <strong>Funding:</strong> New Mexico Research Grant (NMRG), UNM-GPSA — $3,000.<br>
+            <strong>Methods:</strong> Contingent valuation, referendum elicitation, survey design.<br>
+            <strong>Platform:</strong> Qualtrics.
+          </p>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card">
+          <p class="kicker">Energy Economics · Electrification</p>
+          <span class="status-chip active">In Progress</span>
+          <h3>Energy Consumption and Electrification Preferences (LADPU)</h3>
+          <p>
+            Analysis of household electricity and natural gas consumption data and implementation of a
+            discrete choice experiment (DCE) to quantify preferences for electrification and
+            energy-efficient technologies. This project is conducted in collaboration with the
+            Los Alamos Department of Public Utilities (LADPU) and aims to inform local energy
+            transition policy.
+          </p>
+          <p class="muted">
+            <strong>Collaborators:</strong> Yuting Yang (UNM) &amp; Jamal Mamkhezri (NMSU).<br>
+            <strong>Data:</strong> Household electricity and gas consumption records; Los Alamos climate data.<br>
+            <strong>Methods:</strong> Discrete choice modeling, consumption panel analysis.
+          </p>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="card">
+          <p class="kicker">Health Economics · Program Evaluation</p>
+          <span class="status-chip active">In Progress</span>
+          <h3>Community Health Worker Program Evaluation (UNMH)</h3>
+          <p>
+            Cost-effectiveness evaluation of the University of New Mexico Hospital's Community Health
+            Worker (CHW) program. The project links electronic health records (EHR) from Cerner with
+            hospital billing data to estimate the program's impact on healthcare utilization and
+            expenditures. Social determinants of health (SDoH) are flagged using ICD-10 Z-codes
+            (Z55–Z65) mapped through the HCUP CCSR classification system.
+          </p>
+          <p class="muted">
+            <strong>Funding:</strong> UNM Hospital.<br>
+            <strong>Collaborator:</strong> Brady Horn (University of New Mexico).<br>
+            <strong>Methods:</strong> Difference-in-differences, event study, matched controls.<br>
+            <strong>Data:</strong> EHR (Cerner), hospital billing data, HCUP CCSR ICD-10 mapping.
+          </p>
+        </article>
+
       </div>
     </main>
 
-    <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Ahmed Amine Jawhari</p></div></footer>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Ahmed Amine Jawhari</p>
+      </div>
+    </footer>
   </body>
 </html>
